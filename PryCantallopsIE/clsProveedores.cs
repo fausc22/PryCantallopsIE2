@@ -11,6 +11,7 @@ namespace PryCantallopsIE
     class clsProveedores
     {
 
+        
         public void CargarInfo(DataGridView grilla, ComboBox cmbJuzg, ComboBox cmbJuri, ComboBox cmbLiqui)
         {
             string archivoProveedor = "Listado de aseguradores.csv";
@@ -110,5 +111,11 @@ namespace PryCantallopsIE
                 MessageBox.Show("Error al cargar el archivo: " + ex.Message, "ERROR", MessageBoxButtons.OK);
             }
         }
+
+        public void Modificar(TextBox id, TextBox entidad, DateTimePicker apertura, TextBox expediente, ComboBox juzg, ComboBox juri, ComboBox liquidador, TextBox direccion)
+        {
+
+        }
+    
     }
 }

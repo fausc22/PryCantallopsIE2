@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpApertura = new System.Windows.Forms.DateTimePicker();
+            this.txtEntidad = new System.Windows.Forms.TextBox();
+            this.cmbJuzg = new System.Windows.Forms.ComboBox();
+            this.cmbLiqui = new System.Windows.Forms.ComboBox();
+            this.cmbJuri = new System.Windows.Forms.ComboBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtNro = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,11 +50,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmbJuri = new System.Windows.Forms.ComboBox();
-            this.cmbLiqui = new System.Windows.Forms.ComboBox();
-            this.cmbJuzg = new System.Windows.Forms.ComboBox();
-            this.txtEntidad = new System.Windows.Forms.TextBox();
-            this.dtpApertura = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
@@ -73,18 +73,57 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(669, 55);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(250, 306);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos proveedor";
             // 
+            // dtpApertura
+            // 
+            this.dtpApertura.Location = new System.Drawing.Point(155, 97);
+            this.dtpApertura.Name = "dtpApertura";
+            this.dtpApertura.Size = new System.Drawing.Size(76, 20);
+            this.dtpApertura.TabIndex = 27;
+            // 
+            // txtEntidad
+            // 
+            this.txtEntidad.Location = new System.Drawing.Point(155, 59);
+            this.txtEntidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEntidad.Name = "txtEntidad";
+            this.txtEntidad.Size = new System.Drawing.Size(76, 20);
+            this.txtEntidad.TabIndex = 26;
+            // 
+            // cmbJuzg
+            // 
+            this.cmbJuzg.FormattingEnabled = true;
+            this.cmbJuzg.Location = new System.Drawing.Point(155, 155);
+            this.cmbJuzg.Name = "cmbJuzg";
+            this.cmbJuzg.Size = new System.Drawing.Size(76, 21);
+            this.cmbJuzg.TabIndex = 25;
+            // 
+            // cmbLiqui
+            // 
+            this.cmbLiqui.FormattingEnabled = true;
+            this.cmbLiqui.Location = new System.Drawing.Point(155, 229);
+            this.cmbLiqui.Name = "cmbLiqui";
+            this.cmbLiqui.Size = new System.Drawing.Size(76, 21);
+            this.cmbLiqui.TabIndex = 24;
+            // 
+            // cmbJuri
+            // 
+            this.cmbJuri.FormattingEnabled = true;
+            this.cmbJuri.Location = new System.Drawing.Point(155, 190);
+            this.cmbJuri.Name = "cmbJuri";
+            this.cmbJuri.Size = new System.Drawing.Size(76, 21);
+            this.cmbJuri.TabIndex = 23;
+            // 
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(155, 262);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(76, 20);
             this.txtDireccion.TabIndex = 21;
@@ -92,7 +131,7 @@
             // txtNro
             // 
             this.txtNro.Location = new System.Drawing.Point(155, 22);
-            this.txtNro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNro.Margin = new System.Windows.Forms.Padding(2);
             this.txtNro.Name = "txtNro";
             this.txtNro.Size = new System.Drawing.Size(76, 20);
             this.txtNro.TabIndex = 16;
@@ -110,7 +149,7 @@
             // txtExpediente
             // 
             this.txtExpediente.Location = new System.Drawing.Point(155, 126);
-            this.txtExpediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExpediente.Margin = new System.Windows.Forms.Padding(2);
             this.txtExpediente.Name = "txtExpediente";
             this.txtExpediente.Size = new System.Drawing.Size(76, 20);
             this.txtExpediente.TabIndex = 10;
@@ -189,7 +228,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(674, 375);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(74, 29);
             this.btnAgregar.TabIndex = 1;
@@ -200,7 +239,7 @@
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(754, 375);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(74, 28);
             this.btnModificar.TabIndex = 2;
@@ -210,7 +249,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(837, 375);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(74, 29);
             this.btnEliminar.TabIndex = 3;
@@ -221,13 +260,14 @@
             // 
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProveedores.Location = new System.Drawing.Point(18, 55);
-            this.dgvProveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProveedores.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.RowHeadersWidth = 51;
             this.dgvProveedores.RowTemplate.Height = 24;
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedores.Size = new System.Drawing.Size(639, 306);
             this.dgvProveedores.TabIndex = 4;
+            this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
             this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
             this.dgvProveedores.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_CellMouseDoubleClick);
             // 
@@ -242,45 +282,6 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "Registrar Datos del Proveedor";
             // 
-            // cmbJuri
-            // 
-            this.cmbJuri.FormattingEnabled = true;
-            this.cmbJuri.Location = new System.Drawing.Point(155, 190);
-            this.cmbJuri.Name = "cmbJuri";
-            this.cmbJuri.Size = new System.Drawing.Size(76, 21);
-            this.cmbJuri.TabIndex = 23;
-            // 
-            // cmbLiqui
-            // 
-            this.cmbLiqui.FormattingEnabled = true;
-            this.cmbLiqui.Location = new System.Drawing.Point(155, 229);
-            this.cmbLiqui.Name = "cmbLiqui";
-            this.cmbLiqui.Size = new System.Drawing.Size(76, 21);
-            this.cmbLiqui.TabIndex = 24;
-            // 
-            // cmbJuzg
-            // 
-            this.cmbJuzg.FormattingEnabled = true;
-            this.cmbJuzg.Location = new System.Drawing.Point(155, 155);
-            this.cmbJuzg.Name = "cmbJuzg";
-            this.cmbJuzg.Size = new System.Drawing.Size(76, 21);
-            this.cmbJuzg.TabIndex = 25;
-            // 
-            // txtEntidad
-            // 
-            this.txtEntidad.Location = new System.Drawing.Point(155, 59);
-            this.txtEntidad.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEntidad.Name = "txtEntidad";
-            this.txtEntidad.Size = new System.Drawing.Size(76, 20);
-            this.txtEntidad.TabIndex = 26;
-            // 
-            // dtpApertura
-            // 
-            this.dtpApertura.Location = new System.Drawing.Point(155, 97);
-            this.dtpApertura.Name = "dtpApertura";
-            this.dtpApertura.Size = new System.Drawing.Size(76, 20);
-            this.dtpApertura.TabIndex = 27;
-            // 
             // frmRegistroProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,7 +293,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegistroProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistroProveedores";

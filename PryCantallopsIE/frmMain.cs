@@ -61,5 +61,37 @@ namespace PryCantallopsIE
         {
 
         }
+
+        private void registroDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroProveedores f = new frmRegistroProveedores();
+            f.ShowDialog();
+
+            string user = toolUsuario.Text;
+            string Hora = Convert.ToString(DateTime.Now);
+            string Ruta = "logsMenu.txt";
+            string menu = registroDeProveedoresToolStripMenuItem.Text;
+
+            using (StreamWriter writer = new StreamWriter(Ruta, true))
+            {
+                writer.WriteLine($"{user} - Hora de ingreso: {Hora} - Ingreso: {menu}");
+            }
+        }
+
+        private void activosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProveedoresActivo f = new frmProveedoresActivo();
+            f.ShowDialog();
+
+            string user = toolUsuario.Text;
+            string Hora = Convert.ToString(DateTime.Now);
+            string Ruta = "logsMenu.txt";
+            string menu = activosToolStripMenuItem.Text;
+
+            using (StreamWriter writer = new StreamWriter(Ruta, true))
+            {
+                writer.WriteLine($"{user} - Hora de ingreso: {Hora} - Ingreso: {menu}");
+            }
+        }
     }
 }

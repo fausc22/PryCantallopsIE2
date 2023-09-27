@@ -13,3 +13,17 @@ C:\Users\Alumno\Source\Repos\PryCantallopsIE\obj\Debug\PryCantallopsIE.csproj.Ge
 C:\Users\Alumno\Source\Repos\PryCantallopsIE\obj\Debug\PryCantallopsIE.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\Source\Repos\PryCantallopsIE\obj\Debug\PryCantallopsIE.exe
 C:\Users\Alumno\Source\Repos\PryCantallopsIE\obj\Debug\PryCantallopsIE.pdb
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\bin\Debug\PryCantallopsIE.exe.config
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\bin\Debug\PryCantallopsIE.exe
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\bin\Debug\PryCantallopsIE.pdb
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.csproj.AssemblyReference.cache
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.frmLogin.resources
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.frmLogo.resources
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.frmMain.resources
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.frmProveedoresActivo.resources
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.frmRegistroProveedores.resources
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.Properties.Resources.resources
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.csproj.GenerateResource.cache
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.csproj.CoreCompileInputs.cache
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.exe
+C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.pdb

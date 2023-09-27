@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PryCantallopsIE
 {
@@ -44,23 +45,34 @@ namespace PryCantallopsIE
             string liqui = cmbLiqui.Text;
             string direccion = txtDireccion.Text;
 
+
+
             ObjP.Registrar(numero, entidad, apertura, expediente, juzgado, juris, direccion, liqui);
             ObjP.CargarInfo(dgvProveedores, cmbJuzg, cmbJuri, cmbLiqui);
+            
 
         }
 
         private void dgvProveedores_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            
+        }
+
+        private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) 
             {
                 DataGridViewRow fila = dgvProveedores.Rows[e.RowIndex];
 
                 txtNro.Text = fila.Cells[0].Value.ToString();
                 txtEntidad.Text = fila.Cells[1].Value.ToString();
                 txtNro.Text = fila.Cells[2].Value.ToString();
-                dtpApertura.Value = Convert.ToDateTime(fila.Cells[3].Value.ToString());
-                txtExpediente.Text = fila.Cells[0].Value.ToString();
-
+                //dtpApertura.Value = Convert.ToDateTime(fila.Cells[3].Value.ToString());
+                txtExpediente.Text = fila.Cells[4].Value.ToString();
+                cmbJuzg.Text = fila.Cells[5].Value.ToString();
+                cmbJuri.Text = fila.Cells[6].Value.ToString();  
+                //cmbLiqui.Text = fila.Cells[8].Value.ToString();
+                txtDireccion.Text = fila.Cells[7].Value.ToString();
             }
         }
     }

@@ -42,14 +42,65 @@ namespace PryCantallopsIE
             string Hora = Convert.ToString(DateTime.Now);
             string Ruta = "logs.txt";
 
-            using (StreamWriter writer = new StreamWriter(Ruta, false))
+            using (StreamWriter writer = new StreamWriter(Ruta, true))
             {
                 writer.WriteLine($"Usuario: {user} - Hora de ingreso: {Hora}");
             }
 
-            this.Hide();
-            frmMain f = new frmMain();
-            f.Show();
+
+            int contador = 0;
+
+            if (contador < 3)
+            {
+                if (txtUsuario.Text == "admin" && txtContrasenia.Text == "123")
+                {
+                    this.Hide();
+                    frmMain f = new frmMain();
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrectos.", "ERROR", MessageBoxButtons.OK);
+                    txtUsuario.Text = "";
+                    txtContrasenia.Text = "";
+                    contador++;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ha alcanzado el límite de intentos incorrectos. El formulario se cerrará.", "ERROR", MessageBoxButtons.OK);
+                this.Close();
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
