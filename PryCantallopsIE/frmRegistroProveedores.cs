@@ -18,12 +18,16 @@ namespace PryCantallopsIE
             InitializeComponent();
         }
 
+
+        //LLAMO A LA CLASE CON SUS OBJETOS
         clsProveedores ObjP = new clsProveedores();
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
+
+        //EVENTO LOAD
         private void frmRegistroProveedores_Load(object sender, EventArgs e)
         {
             ObjP.CargarInfo(dgvProveedores, cmbJuzg, cmbJuri, cmbLiqui);
@@ -36,6 +40,61 @@ namespace PryCantallopsIE
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
+            
+
+        }
+
+
+        //EVENTO DOBLE CLICK PARA QUE SE AGREGUEN DATOS DE LA GRILLA
+        private void dgvProveedores_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dgvProveedores.Rows[e.RowIndex];
+
+                string numeroRegistro = selectedRow.Cells[0].Value.ToString();
+                string entidad = selectedRow.Cells[1].Value.ToString();
+                DateTime apertura = DateTime.Parse(selectedRow.Cells[2].Value.ToString());
+                string numExpediente = selectedRow.Cells[3].Value.ToString();
+                string juzgado = selectedRow.Cells[4].Value.ToString();
+                string jurisdiccion = selectedRow.Cells[5].Value.ToString();
+                string direccion = selectedRow.Cells[6].Value.ToString();
+                string responsable = selectedRow.Cells[7].Value.ToString();
+
+                txtNro.Text = numeroRegistro;
+                txtEntidad.Text = entidad;
+                dtpApertura.Value = apertura;
+                txtExpediente.Text = numExpediente;
+                cmbJuzg.Text = juzgado;
+                cmbJuri.Text = jurisdiccion;
+                txtDireccion.Text = direccion;
+                cmbLiqui.Text = responsable;
+
+                btnModificar.Enabled = true;
+                btnAgregar.Enabled = false;
+                btnEliminar.Enabled = true;
+            }
+        }
+
+        private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        //EVENTO PARA HABILITAR BOTON
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNro.Text != null && txtEntidad.Text != null && txtExpediente.Text != null && txtDireccion.Text != null && cmbLiqui.SelectedIndex != -1 && cmbJuzg.SelectedIndex != -1 && cmbJuri.SelectedIndex != -1)
+            {
+                btnAgregar.Enabled = true;
+            }
+        }
+
+
+        //EVENTO AGREGAR
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
             int numero = Convert.ToInt32(txtNro.Text);
             string entidad = txtEntidad.Text;
             string apertura = dtpApertura.Value.ToShortDateString();
@@ -46,34 +105,83 @@ namespace PryCantallopsIE
             string direccion = txtDireccion.Text;
 
 
-
-            ObjP.Registrar(numero, entidad, apertura, expediente, juzgado, juris, direccion, liqui);
-            ObjP.CargarInfo(dgvProveedores, cmbJuzg, cmbJuri, cmbLiqui);
-            
-
-        }
-
-        private void dgvProveedores_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            
-        }
-
-        private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0) 
+            try
             {
-                DataGridViewRow fila = dgvProveedores.Rows[e.RowIndex];
-
-                txtNro.Text = fila.Cells[0].Value.ToString();
-                txtEntidad.Text = fila.Cells[1].Value.ToString();
-                txtNro.Text = fila.Cells[2].Value.ToString();
-                //dtpApertura.Value = Convert.ToDateTime(fila.Cells[3].Value.ToString());
-                txtExpediente.Text = fila.Cells[4].Value.ToString();
-                cmbJuzg.Text = fila.Cells[5].Value.ToString();
-                cmbJuri.Text = fila.Cells[6].Value.ToString();  
-                //cmbLiqui.Text = fila.Cells[8].Value.ToString();
-                txtDireccion.Text = fila.Cells[7].Value.ToString();
+                ObjP.Registrar(numero, entidad, apertura, expediente, juzgado, juris, direccion, liqui);
+                limpiarGrilla();
+                ObjP.CargarInfo(dgvProveedores, cmbJuzg, cmbJuri, cmbLiqui);
+                btnAgregar.Enabled = false;
+                Limpiar();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "", MessageBoxButtons.OK);
             }
+
+
+            
+
+            
+        }
+
+        //EVENTO MODIFICAR
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            int numero = Convert.ToInt32(txtNro.Text);
+            string entidad = txtEntidad.Text;
+            string apertura = dtpApertura.Value.ToShortDateString();
+            string expediente = txtExpediente.Text;
+            string juzgado = cmbJuzg.Text;
+            string juris = cmbJuri.Text;
+            string liqui = cmbLiqui.Text;
+            string direccion = txtDireccion.Text;
+
+
+            try
+            {
+                ObjP.Modificar(numero, entidad, apertura, expediente, juzgado, juris, direccion, liqui);
+                limpiarGrilla();
+                ObjP.CargarInfo(dgvProveedores, cmbJuzg, cmbJuri, cmbLiqui);
+                btnAgregar.Enabled = false;
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "", MessageBoxButtons.OK);
+            }
+        }
+
+
+        //EVENTO ELIMINAR
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult pregunta = MessageBox.Show("¿Estás seguro de que deseas eliminar?", "Confirmación", MessageBoxButtons.YesNo);
+            int numero = Convert.ToInt32(txtNro.Text);
+
+            if (pregunta == DialogResult.Yes)
+            {
+                ObjP.Eliminar(numero);
+                limpiarGrilla();
+                ObjP.CargarInfo(dgvProveedores, cmbJuzg, cmbJuri, cmbLiqui);
+                Limpiar();
+            }
+        }
+
+        //LIMPIAR TXT Y CMB
+        private void Limpiar()
+        {
+            txtDireccion.Text = "";
+            txtEntidad.Text = "";
+            txtExpediente.Text = "";
+            txtNro.Text = "";
+            cmbJuri.SelectedIndex = -1;
+            cmbJuzg.SelectedIndex = -1;
+            cmbLiqui.SelectedIndex = -1;
+        }
+
+        //limpiar grilla
+        private void limpiarGrilla()
+        {
+            dgvProveedores.Rows.Clear();
         }
     }
 }

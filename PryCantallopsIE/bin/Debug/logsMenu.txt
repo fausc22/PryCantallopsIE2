@@ -11,3 +11,23 @@ Usuario: admin - Hora de ingreso: 27/9/2023 20:20:51 - Ingreso: Registro de Prov
 Usuario: admin - Hora de ingreso: 27/9/2023 20:21:29 - Ingreso: Registro de Proveedores
 Usuario: admin - Hora de ingreso: 27/9/2023 20:22:27 - Ingreso: Registro de Proveedores
 Usuario: admin - Hora de ingreso: 27/9/2023 20:22:49 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:00:16 - Ingreso: Activos
+Usuario: admin - Hora de ingreso: 3/10/2023 19:00:51 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:04:47 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:16:13 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:17:26 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:30:52 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:32:35 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:37:56 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:38:57 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:39:56 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:40:43 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:41:34 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:43:46 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:44:14 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:45:01 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:46:21 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:48:23 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:49:45 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:50:29 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 3/10/2023 19:51:11 - Ingreso: Registro de Proveedores
