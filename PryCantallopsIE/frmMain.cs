@@ -22,7 +22,7 @@ namespace PryCantallopsIE
         {
 
         }
-
+        
         private void frmMain_Load(object sender, EventArgs e)
         {
             string Ruta = "logs.txt";
@@ -40,6 +40,7 @@ namespace PryCantallopsIE
                         string horaIngreso = partes[1].Trim();
 
                         toolUsuario.Text = usuario;
+                        ActualizarMenuSegunRol(usuario);
                     }
                 }
             }
@@ -91,6 +92,27 @@ namespace PryCantallopsIE
             using (StreamWriter writer = new StreamWriter(Ruta, true))
             {
                 writer.WriteLine($"{user} - Hora de ingreso: {Hora} - Ingreso: {menu}");
+            }
+        }
+
+        private void ActualizarMenuSegunRol(string rol)
+        {
+           
+
+            if (rol == "Usuario: admin")
+            {
+                gestionToolStripMenuItem.Visible = true;
+                aaToolStripMenuItem.Visible = true;
+            }
+            else 
+            {
+                if (rol == "Usuario: guest")
+                {
+                    gestionToolStripMenuItem.Visible = true;
+                    aaToolStripMenuItem.Visible = false;
+
+                }
+                
             }
         }
     }

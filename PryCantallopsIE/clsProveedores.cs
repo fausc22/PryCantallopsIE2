@@ -26,10 +26,8 @@ namespace PryCantallopsIE
                     if (readLine != null)
                     {
                         string[] separador = readLine.Split(';');
-                        foreach (string columna in separador)
-                        {
-                            grilla.Columns.Add(columna, columna);
-                        }
+                        
+                        
                         HashSet<string> jurisdicciones = new HashSet<string>();
                         HashSet<string> responsables = new HashSet<string>();
                         HashSet<string> juzgados = new HashSet<string>();

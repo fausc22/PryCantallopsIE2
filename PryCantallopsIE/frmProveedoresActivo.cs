@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
 
 namespace PryCantallopsIE
@@ -12,16 +13,20 @@ namespace PryCantallopsIE
         }
 
         // Ruta de la carpeta principal del proyecto
-        string rutaProyecto = @"C:\Users\norec\source\repos\PryCantallopsIE\Proveedores";
+        
 
         private void frmProveedoresActivo_Load(object sender, EventArgs e)
         {
+            string rutaBase = AppDomain.CurrentDomain.BaseDirectory;
+            string carpetaProveedores = "Proveedores";
+
+            string rutaCompleta = Path.Combine(rutaBase, carpetaProveedores);
             // Agregar la carpeta principal al árbol
             TreeNode rootNode = new TreeNode("Carpetas y Archivos del Proyecto");
             tvCarpetas.Nodes.Add(rootNode);
 
             // Llamamos a un método recursivo para agregar carpetas y archivos
-            AgregarCarpetasYArchivos(rootNode, rutaProyecto);
+            AgregarCarpetasYArchivos(rootNode, rutaCompleta);
         }
 
         private void AgregarCarpetasYArchivos(TreeNode parentNode, string ruta)

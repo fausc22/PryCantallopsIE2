@@ -58,6 +58,12 @@ namespace PryCantallopsIE
                     frmMain f = new frmMain();
                     f.Show();
                 }
+                else if (txtUsuario.Text == "guest" && txtContrasenia.Text == "123")
+                {
+                    this.Hide();
+                    frmMain f = new frmMain();
+                    f.Show();
+                }
                 else
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrectos.", "ERROR", MessageBoxButtons.OK);

@@ -29,31 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.gestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
-            this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.menuStripMain.SuspendLayout();
+            this.statusStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripMain
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionToolStripMenuItem,
             this.aaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStripMain.Size = new System.Drawing.Size(1067, 24);
+            this.menuStripMain.TabIndex = 0;
+            this.menuStripMain.Text = "menuStrip1";
             // 
             // gestionToolStripMenuItem
             // 
@@ -62,6 +64,7 @@
             this.gestionToolStripMenuItem.Name = "gestionToolStripMenuItem";
             this.gestionToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.gestionToolStripMenuItem.Text = "Gestion";
+            this.gestionToolStripMenuItem.Visible = false;
             // 
             // proveedorToolStripMenuItem
             // 
@@ -85,6 +88,7 @@
             this.aaToolStripMenuItem.Name = "aaToolStripMenuItem";
             this.aaToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
             this.aaToolStripMenuItem.Text = "Listado / Reportes";
+            this.aaToolStripMenuItem.Visible = false;
             this.aaToolStripMenuItem.Click += new System.EventHandler(this.aaToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
@@ -98,21 +102,22 @@
             // activosToolStripMenuItem
             // 
             this.activosToolStripMenuItem.Name = "activosToolStripMenuItem";
-            this.activosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.activosToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.activosToolStripMenuItem.Text = "Activos";
             this.activosToolStripMenuItem.Click += new System.EventHandler(this.activosToolStripMenuItem_Click);
             // 
-            // statusStrip1
+            // statusStripMain
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolHora,
             this.toolUsuario});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStripMain.Location = new System.Drawing.Point(0, 532);
+            this.statusStripMain.Name = "statusStripMain";
+            this.statusStripMain.Padding = new System.Windows.Forms.Padding(19, 0, 1, 0);
+            this.statusStripMain.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.statusStripMain.Size = new System.Drawing.Size(1067, 22);
+            this.statusStripMain.TabIndex = 1;
+            this.statusStripMain.Text = "statusStrip1";
             // 
             // toolHora
             // 
@@ -138,22 +143,24 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryCantallopsIE.Properties.Resources.logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.statusStripMain);
+            this.Controls.Add(this.menuStripMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStripMain;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "INICIO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.menuStripMain.ResumeLayout(false);
+            this.menuStripMain.PerformLayout();
+            this.statusStripMain.ResumeLayout(false);
+            this.statusStripMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,10 +168,10 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem gestionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aaToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStripMain;
         private System.Windows.Forms.ToolStripStatusLabel toolUsuario;
         private System.Windows.Forms.Timer timerHora;
         private System.Windows.Forms.ToolStripStatusLabel toolHora;

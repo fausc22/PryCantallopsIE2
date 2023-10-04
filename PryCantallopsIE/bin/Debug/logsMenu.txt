@@ -31,3 +31,16 @@ Usuario: admin - Hora de ingreso: 3/10/2023 19:48:23 - Ingreso: Registro de Prov
 Usuario: admin - Hora de ingreso: 3/10/2023 19:49:45 - Ingreso: Registro de Proveedores
 Usuario: admin - Hora de ingreso: 3/10/2023 19:50:29 - Ingreso: Registro de Proveedores
 Usuario: admin - Hora de ingreso: 3/10/2023 19:51:11 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:22:11 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:24:16 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:25:12 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:27:45 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:29:22 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:30:57 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:34:19 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:37:56 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:38:29 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:39:00 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:40:56 - Ingreso: Registro de Proveedores
+Usuario: admin - Hora de ingreso: 4/10/2023 16:41:00 - Ingreso: Activos
+Usuario: admin - Hora de ingreso: 4/10/2023 16:41:08 - Ingreso: Registro de Proveedores

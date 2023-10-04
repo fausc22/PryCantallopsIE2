@@ -71,6 +71,7 @@ namespace PryCantallopsIE
                 txtDireccion.Text = direccion;
                 cmbLiqui.Text = responsable;
 
+                txtNro.ReadOnly = true;
                 btnModificar.Enabled = true;
                 btnAgregar.Enabled = false;
                 btnEliminar.Enabled = true;
@@ -182,6 +183,19 @@ namespace PryCantallopsIE
         private void limpiarGrilla()
         {
             dgvProveedores.Rows.Clear();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void txtNro_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNro.Text != null)
+            {
+                btnLimpiar.Enabled = true;
+            }
         }
     }
 }
