@@ -37,10 +37,13 @@
             this.aaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
+            this.administrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.statusStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -49,11 +52,11 @@
             // 
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionToolStripMenuItem,
-            this.aaToolStripMenuItem});
+            this.aaToolStripMenuItem,
+            this.usuarioToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStripMain.Size = new System.Drawing.Size(1067, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(800, 24);
             this.menuStripMain.TabIndex = 0;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -71,7 +74,7 @@
             this.proveedorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroDeProveedoresToolStripMenuItem});
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.proveedorToolStripMenuItem.Text = "Proveedor";
             // 
             // registroDeProveedoresToolStripMenuItem
@@ -96,7 +99,7 @@
             this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.activosToolStripMenuItem});
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // activosToolStripMenuItem
@@ -106,16 +109,31 @@
             this.activosToolStripMenuItem.Text = "Activos";
             this.activosToolStripMenuItem.Click += new System.EventHandler(this.activosToolStripMenuItem_Click);
             // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearNuevoUsuarioToolStripMenuItem,
+            this.administrarUsuariosToolStripMenuItem});
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuarioToolStripMenuItem.Text = "Usuarios";
+            // 
+            // crearNuevoUsuarioToolStripMenuItem
+            // 
+            this.crearNuevoUsuarioToolStripMenuItem.Name = "crearNuevoUsuarioToolStripMenuItem";
+            this.crearNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.crearNuevoUsuarioToolStripMenuItem.Text = "Crear nuevo usuario";
+            this.crearNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoUsuarioToolStripMenuItem_Click);
+            // 
             // statusStripMain
             // 
             this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolHora,
             this.toolUsuario});
-            this.statusStripMain.Location = new System.Drawing.Point(0, 532);
+            this.statusStripMain.Location = new System.Drawing.Point(0, 428);
             this.statusStripMain.Name = "statusStripMain";
-            this.statusStripMain.Padding = new System.Windows.Forms.Padding(19, 0, 1, 0);
             this.statusStripMain.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStripMain.Size = new System.Drawing.Size(1067, 22);
+            this.statusStripMain.Size = new System.Drawing.Size(800, 22);
             this.statusStripMain.TabIndex = 1;
             this.statusStripMain.Text = "statusStrip1";
             // 
@@ -141,18 +159,23 @@
             this.timerHora.Interval = 1000;
             this.timerHora.Tick += new System.EventHandler(this.timerHora_Tick);
             // 
+            // administrarUsuariosToolStripMenuItem
+            // 
+            this.administrarUsuariosToolStripMenuItem.Name = "administrarUsuariosToolStripMenuItem";
+            this.administrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.administrarUsuariosToolStripMenuItem.Text = "Administrar usuarios";
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryCantallopsIE.Properties.Resources.logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.menuStripMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripMain;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
             this.Text = "INICIO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -179,5 +202,8 @@
         private System.Windows.Forms.ToolStripMenuItem registroDeProveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearNuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrarUsuariosToolStripMenuItem;
     }
 }

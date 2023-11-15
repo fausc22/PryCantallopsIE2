@@ -18,6 +18,8 @@ namespace PryCantallopsIE
             InitializeComponent();
         }
 
+        clsUser objUser = new clsUser();
+
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
@@ -25,25 +27,10 @@ namespace PryCantallopsIE
         
         private void frmMain_Load(object sender, EventArgs e)
         {
-            string Ruta = "logs.txt";
-            using (StreamReader reader = new StreamReader(Ruta))
-            {
-                
-                string linea;
-                while ((linea = reader.ReadLine()) != null)
-                {
-                    
-                    string[] partes = linea.Split('-');
-                    if (partes.Length == 2)
-                    {
-                        string usuario = partes[0].Trim();
-                        string horaIngreso = partes[1].Trim();
-
-                        toolUsuario.Text = usuario;
-                        ActualizarMenuSegunRol(usuario);
-                    }
-                }
-            }
+            string user = objUser.ObtenerNombreUsuario();
+            string rol = objUser.ObtenerRolUsuario();
+            toolUsuario.Text = user;
+            ActualizarMenuSegunRol(rol);
         }
 
         private void toolFecha_Click(object sender, EventArgs e)
@@ -99,14 +86,14 @@ namespace PryCantallopsIE
         {
            
 
-            if (rol == "Usuario: admin")
+            if (rol == "ADMIN")
             {
                 gestionToolStripMenuItem.Visible = true;
                 aaToolStripMenuItem.Visible = true;
             }
             else 
             {
-                if (rol == "Usuario: guest")
+                if (rol == "GUEST")
                 {
                     gestionToolStripMenuItem.Visible = true;
                     aaToolStripMenuItem.Visible = false;
@@ -114,6 +101,12 @@ namespace PryCantallopsIE
                 }
                 
             }
+        }
+
+        private void crearNuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios frmUsuarios = new frmUsuarios();
+            frmUsuarios.ShowDialog();
         }
     }
 }

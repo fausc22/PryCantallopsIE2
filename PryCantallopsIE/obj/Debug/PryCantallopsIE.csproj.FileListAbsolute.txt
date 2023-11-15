@@ -27,3 +27,4 @@ C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantal
 C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.csproj.CoreCompileInputs.cache
 C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.exe
 C:\Users\norec\Source\Repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.pdb
+C:\Users\norec\source\repos\PryCantallopsIE2\PryCantallopsIE\obj\Debug\PryCantallopsIE.frmUsuarios.resources

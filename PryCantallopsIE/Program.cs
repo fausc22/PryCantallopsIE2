@@ -16,7 +16,7 @@ namespace PryCantallopsIE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmProveedoresActivo());
+            Application.Run(new frmLogo());
         }
     }
 }

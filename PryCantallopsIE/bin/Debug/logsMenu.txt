@@ -44,3 +44,6 @@ Usuario: admin - Hora de ingreso: 4/10/2023 16:39:00 - Ingreso: Registro de Prov
 Usuario: admin - Hora de ingreso: 4/10/2023 16:40:56 - Ingreso: Registro de Proveedores
 Usuario: admin - Hora de ingreso: 4/10/2023 16:41:00 - Ingreso: Activos
 Usuario: admin - Hora de ingreso: 4/10/2023 16:41:08 - Ingreso: Registro de Proveedores
+Usuario: guest - Hora de ingreso: 11/11/2023 13:33:24 - Ingreso: Registro de Proveedores
+admin - Hora de ingreso: 12/11/2023 20:53:24 - Ingreso: Activos
+admin - Hora de ingreso: 12/11/2023 20:53:27 - Ingreso: Registro de Proveedores
