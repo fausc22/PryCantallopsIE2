@@ -32,12 +32,12 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.cmbRol = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,20 +92,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // txtUsuario
+            // label3
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(101, 19);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Rol";
             // 
-            // txtPass
+            // label2
             // 
-            this.txtPass.Location = new System.Drawing.Point(101, 45);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(100, 20);
-            this.txtPass.TabIndex = 4;
-            this.txtPass.UseSystemPasswordChar = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Contraseña";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Usuario";
             // 
             // cmbRol
             // 
@@ -119,32 +131,20 @@
             this.cmbRol.Size = new System.Drawing.Size(100, 21);
             this.cmbRol.TabIndex = 5;
             // 
-            // label1
+            // txtPass
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Usuario";
+            this.txtPass.Location = new System.Drawing.Point(101, 45);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(100, 20);
+            this.txtPass.TabIndex = 4;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
-            // label2
+            // txtUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Contraseña";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Rol";
+            this.txtUsuario.Location = new System.Drawing.Point(101, 19);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 3;
             // 
             // frmUsuarios
             // 
@@ -153,7 +153,8 @@
             this.ClientSize = new System.Drawing.Size(278, 450);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmUsuarios";
-            this.Text = "frmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ingresar nuevo usuario";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
